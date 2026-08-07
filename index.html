@@ -85,13 +85,15 @@
     .ninja-mark .mini-word{position:absolute;left:48px;top:105px;width:114px;padding:8px;background:white;border:3px solid var(--yellow);border-radius:10px;text-align:center;color:var(--blue);font-weight:1000;letter-spacing:2px;box-shadow:0 5px 0 #d7e1ed}
     .ninja-mark .spark{position:absolute;color:var(--yellow);font-size:25px;font-weight:1000}.ninja-mark .spark.a{left:25px;top:30px}.ninja-mark .spark.b{right:22px;top:55px}
     .picker{max-width:1050px;margin:auto;padding:10px 28px 70px;text-align:center;position:relative;z-index:2}
+    .picker.wide{max-width:1180px}
     .mission-icon{width:72px;height:72px;border-radius:22px;background:var(--blue);border:6px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:32px;font-weight:1000;transform:rotate(-4deg)}
     .mission-icon.mouse{background:var(--orange);color:var(--navy)}
     .picker h1{font-size:clamp(40px,5vw,64px)}
     .picker .lead{margin:12px 0 28px}
     .difficulties{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;text-align:left}
+    .difficulties.four{grid-template-columns:repeat(4,minmax(0,1fr))}
     .difficulty{min-height:255px;background:white;color:var(--ink);border:0;border-top:7px solid #68d8a5;border-radius:20px;box-shadow:0 13px 0 rgba(0,0,0,.2);padding:22px;cursor:pointer;display:flex;flex-direction:column;transition:.16s}
-    .difficulty:nth-child(2){border-color:var(--yellow)}.difficulty:nth-child(3){border-color:#ff746e}
+    .difficulty:nth-child(2){border-color:var(--yellow)}.difficulty:nth-child(3){border-color:#ff746e}.difficulty:nth-child(4){border-color:#ae8bff}
     .difficulty:hover{transform:translateY(5px);box-shadow:0 8px 0 rgba(0,0,0,.2)}
     .difficulty small{color:#a7b3c5;font-weight:1000;letter-spacing:2px}
     .difficulty strong{color:var(--blue);font-size:25px;margin-top:10px}
@@ -105,6 +107,13 @@
     .game-name>div{display:flex;flex-direction:column}.game-name strong{font-size:16px}.game-name small{color:#77849a;font-weight:800}
     .stats{display:flex;gap:25px;justify-self:end}.stat{display:flex;flex-direction:column;min-width:65px}.stat small{color:#7c899e;font-size:9px;font-weight:1000;letter-spacing:2px}.stat strong{color:var(--blue);font-size:20px}
     .hearts .off{color:#dce2eb}.hearts span{color:#ff676a}
+    .custom-tools{position:absolute;right:18px;top:17px;width:250px;padding:14px 15px 13px;border:2px solid rgba(255,255,255,.28);border-radius:17px;background:rgba(7,22,61,.88);backdrop-filter:blur(8px);box-shadow:0 10px 28px rgba(0,0,0,.28);color:white;z-index:10;text-align:left}
+    .custom-tools-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}.custom-tools h3{margin:0;color:var(--yellow);font-size:11px;letter-spacing:1.7px;white-space:nowrap}.custom-tools h3 span{font-size:15px;margin-right:5px}
+    .custom-collapse{width:27px;height:27px;flex:0 0 27px;border:1px solid rgba(255,255,255,.28);border-radius:8px;background:rgba(255,255,255,.12);color:white;cursor:pointer;font-size:19px;font-weight:1000;line-height:1;display:flex;align-items:center;justify-content:center}.custom-collapse:hover{background:var(--yellow);color:var(--navy)}
+    .custom-tools.is-collapsed{width:88px;padding:9px 10px}.custom-tools.is-collapsed .custom-tools-head{margin:0}.custom-tools.is-collapsed h3{font-size:0}.custom-tools.is-collapsed h3 span{font-size:17px;margin:0}.custom-tools.is-collapsed .custom-control,.custom-tools.is-collapsed .custom-toggle{display:none}
+    .custom-control{display:grid;grid-template-columns:78px 1fr 43px;gap:7px;align-items:center;margin:8px 0;font-size:10px;font-weight:900}.custom-control output{color:var(--sky);text-align:right;font-size:10px}.custom-control input[type="range"]{width:100%;accent-color:var(--yellow)}
+    .custom-control select{grid-column:2/4;width:100%;border:0;border-radius:7px;padding:5px 7px;background:white;color:var(--ink);font-size:10px;font-weight:900}
+    .custom-toggle{display:flex;align-items:center;gap:8px;margin-top:10px;padding-top:9px;border-top:1px solid rgba(255,255,255,.18);font-size:11px;font-weight:1000}.custom-toggle input{width:18px;height:18px;accent-color:var(--yellow)}
     .letter-arena{height:calc(100vh - 138px);min-height:510px;max-height:650px;max-width:1180px;margin:18px auto 0;border:6px solid white;border-radius:23px;overflow:hidden;position:relative;background:linear-gradient(rgba(66,105,155,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(66,105,155,.08) 1px,transparent 1px),radial-gradient(circle at 50% 0,#17346a,transparent 55%),linear-gradient(#071944,#040c2a);background-size:35px 35px,35px 35px,auto,auto;box-shadow:0 18px 45px rgba(15,39,83,.22)}
     .typing-arena{height:calc(100vh - 140px);min-height:520px;max-height:660px;max-width:1180px;margin:18px auto 0;border:6px solid white;border-radius:23px;overflow:hidden;position:relative;background:linear-gradient(rgba(85,129,187,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(85,129,187,.08) 1px,transparent 1px),radial-gradient(circle at 20% 10%,#1b4380,transparent 32%),linear-gradient(180deg,#0b2455,#061437);background-size:38px 38px,38px 38px,auto,auto;box-shadow:0 18px 45px rgba(15,39,83,.22)}
     .typing-arena:before,.typing-arena:after{content:"";position:absolute;width:120px;height:42px;border-radius:50%;background:rgba(255,255,255,.09)}
@@ -217,8 +226,9 @@
     .t-piece.small{width:66px;height:66px}.t-piece.wide{width:92px;height:64px}
     .puzzle-name{color:var(--blue);font-weight:1000}
     .tip{text-align:center;color:#63718a;font-size:12px;font-weight:800;margin:9px}
-    @media(max-width:850px){.choices,.difficulties,.library-grid{grid-template-columns:1fr}.choices{max-width:460px}.difficulties{max-width:520px;margin:auto}.library-grid{max-width:520px;margin:28px auto}.shape-game,.tangram-game{grid-template-columns:1fr}.board-arrow{height:32px;transform:rotate(-90deg)}.board{min-height:430px}.shape-grid{min-height:320px}}
+    @media(max-width:850px){.choices,.difficulties,.difficulties.four,.library-grid{grid-template-columns:1fr}.choices{max-width:460px}.difficulties{max-width:520px;margin:auto}.library-grid{max-width:520px;margin:28px auto}.shape-game,.tangram-game{grid-template-columns:1fr}.board-arrow{height:32px;transform:rotate(-90deg)}.board{min-height:430px}.shape-grid{min-height:320px}}
     @media(max-width:620px){.top{padding:18px}.brand{height:45px}.brand img{width:166px;height:40px}.hero{padding:18px 15px 45px}h1{font-size:42px;letter-spacing:-2px}.game-head{padding:8px 10px;gap:7px;grid-template-columns:auto 1fr auto}.game-head .back{font-size:0;width:40px;height:40px;padding:0}.game-head .back span{font-size:20px}.game-name .badge{display:none}.game-name strong{font-size:13px}.stats{gap:7px}.stat{min-width:48px}.letter-arena,.typing-arena{border-left:0;border-right:0;border-radius:0;margin-top:8px}.falling{width:52px;height:52px;font-size:28px}.word-balloon{width:145px}.word-tag{min-width:110px;font-size:15px;padding:9px}.modal{padding:26px 20px}.tutorial-modal{padding:25px 12px 16px}.tutorial-modal h2{font-size:25px;padding:0 40px}.demo-grid{grid-template-columns:1fr;max-height:540px;overflow:auto}.demo-panel{height:235px}.shape-game,.tangram-game{padding:0 10px}.board{padding:16px}.shape-grid{gap:9px}.cell{min-height:96px}.shape{width:64px;height:64px}.tangram-canvas{height:350px}.tangram-tray{min-height:350px}.t-piece-cell{min-height:105px}}
+    @media(max-width:620px){.custom-tools{right:7px;top:8px;width:218px;padding:10px 11px;transform:scale(.86);transform-origin:top right}.custom-control{grid-template-columns:68px 1fr 38px;margin:6px 0}.custom-toggle{margin-top:7px;padding-top:7px}}
   </style>
 </head>
 <body>
@@ -226,9 +236,9 @@
   <script>
     "use strict";
     const app=document.getElementById("app");
-    const difficulties={easy:"Explorador",medium:"Piloto",hard:"Comandante"};
-    const keyboardRules={easy:"Caída lenta · acelera muy poquito",medium:"Caída media · acelera de a poco",hard:"Caída rápida · cada error resta 1 vida"};
-    const typingRules={easy:"Palabras simples · aparecen desde arriba",medium:"Palabras largas · acelera con el tiempo",hard:"Conceptos complejos · tildes y gran velocidad"};
+    const difficulties={easy:"Explorador",medium:"Piloto",hard:"Comandante",custom:"Custom"};
+    const keyboardRules={easy:"Caída lenta · acelera muy poquito",medium:"Caída media · acelera de a poco",hard:"Caída rápida · cada error resta 1 vida",custom:"Configurá velocidad, vidas y modo infinito"};
+    const typingRules={easy:"Palabras simples · aparecen desde arriba",medium:"Palabras largas · acelera con el tiempo",hard:"Conceptos complejos · tildes y gran velocidad",custom:"Elegí ritmo, aceleración y vocabulario"};
     const mouseRules={easy:"Sin reloj · avanzá a tu ritmo",medium:"30 segundos en cada nivel",hard:"Sumá 10 s · máximo 30"};
     const shapeData=[
       {id:"circle",label:"círculo",color:"#ffca3a"},
@@ -318,25 +328,32 @@
     }
     function picker(type){
       const keyboard=type==="keyboard",typing=type==="typing",tangram=type==="tangram",title=keyboard?"Lluvia de letras":typing?"Ninja de palabras":tangram?"Tangram espacial":"Encajá las formas",icon=keyboard?"⌨":typing?"🥷":tangram?"▲":"◆",rules=keyboard?keyboardRules:typing?typingRules:mouseRules;
-      const cards=["easy","medium","hard"].map((d,i)=>
-        '<button class="difficulty" onclick="go(\''+type+'\',\''+d+'\')"><small>0'+(i+1)+'</small><strong>'+difficulties[d]+'</strong><span>'+["Para aprender con calma","Un desafío equilibrado","Para manos muy veloces"][i]+'</span><span class="rule">'+rules[d]+'</span><span class="choose">ELEGIR <b>→</b></span></button>'
+      const modes=keyboard||typing?["easy","medium","hard","custom"]:["easy","medium","hard"];
+      const cards=modes.map((d,i)=>
+        '<button class="difficulty" onclick="go(\''+type+'\',\''+d+'\')"><small>0'+(i+1)+'</small><strong>'+difficulties[d]+'</strong><span>'+["Para aprender con calma","Un desafío equilibrado","Para manos muy veloces","Creá tu propio desafío"][i]+'</span><span class="rule">'+rules[d]+'</span><span class="choose">ELEGIR <b>→</b></span></button>'
       ).join("");
       app.innerHTML=cosmos(
         '<header class="top">'+brand()+'<button class="back" onclick="go(\''+(keyboard||typing?"keyboardMenu":"mouseMenu")+'\')"><span>←</span> Volver</button></header>'+
-        '<section class="picker"><div class="mission-icon '+(keyboard||typing?"":"mouse")+'">'+icon+'</div><p class="eyebrow">MISIÓN DE '+(keyboard||typing?"TECLADO":"MOUSE")+'</p><h1>'+title+'</h1><p class="lead">'+(keyboard?"Elegí una velocidad. Siempre podés volver a intentarlo.":typing?"Elegí qué tan rápido bajarán los globos.":tangram?"Elegí el ritmo para construir tus figuras.":"Elegí cómo querés entrenar tu precisión.")+'</p><div class="difficulties">'+cards+'</div></section>'
+        '<section class="picker '+(keyboard||typing?"wide":"")+'"><div class="mission-icon '+(keyboard||typing?"":"mouse")+'">'+icon+'</div><p class="eyebrow">MISIÓN DE '+(keyboard||typing?"TECLADO":"MOUSE")+'</p><h1>'+title+'</h1><p class="lead">'+(keyboard?"Elegí una velocidad. Siempre podés volver a intentarlo.":typing?"Elegí qué tan rápido bajarán los globos.":tangram?"Elegí el ritmo para construir tus figuras.":"Elegí cómo querés entrenar tu precisión.")+'</p><div class="difficulties '+(keyboard||typing?"four":"")+'">'+cards+'</div></section>'
       )
     }
     function gameHeader(type,difficulty,extra){
       const keyboard=type==="keyboard",typing=type==="typing",tangram=type==="tangram";
       return '<header class="game-head"><button class="back" onclick="go(\'picker\',\''+type+'\')"><span>←</span> Volver</button><div class="game-name"><span class="badge">'+(keyboard?"⌨":typing?"🥷":tangram?"▲":"◆")+'</span><div><strong>'+(keyboard?"Lluvia de letras":typing?"Ninja de palabras":tangram?"Tangram espacial":"Encajá las formas")+'</strong><small>'+difficulties[difficulty]+'</small></div></div><div class="stats">'+extra+'</div></header>'
     }
+    function wireCustomPanel(){
+      const panel=document.querySelector(".custom-tools"),button=panel?.querySelector(".custom-collapse");if(!panel||!button)return;
+      button.onclick=()=>{const collapsed=panel.classList.toggle("is-collapsed");button.textContent=collapsed?"+":"−";button.setAttribute("aria-expanded",String(!collapsed));button.setAttribute("aria-label",collapsed?"Abrir ajustes custom":"Minimizar ajustes custom")}
+    }
     function keyboardGame(difficulty){
-      let letters=[],score=0,lives=3,playing=false,raf=0,last=0,spawn=0,nextId=1;
-      const cfg={easy:{speed:24,ramp:.32,spawn:1750},medium:{speed:38,ramp:.8,spawn:1350},hard:{speed:55,ramp:1.45,spawn:1000}}[difficulty];
+      let letters=[],score=0,lives=3,startingLives=3,neverLose=false,playing=false,raf=0,last=0,spawn=0,nextId=1;
+      const custom=difficulty==="custom",cfg={easy:{speed:24,ramp:.32,spawn:1750},medium:{speed:38,ramp:.8,spawn:1350},hard:{speed:55,ramp:1.45,spawn:1000},custom:{speed:32,ramp:0,spawn:1550}}[difficulty];
       const stats='<div class="stat"><small>PUNTOS</small><strong id="score">000</strong></div><div class="stat"><small>VIDAS</small><strong id="hearts" class="hearts"><span>♥</span><span>♥</span><span>♥</span></strong></div>';
-      app.innerHTML='<main class="app game">'+gameHeader("keyboard",difficulty,stats)+'<section class="letter-arena" id="arena"><div class="ground"></div><div class="robot" id="robot"><i class="beam"></i><i class="antenna"></i><span class="head">•‿•</span><span class="body" id="robotKey">W</span></div><div class="overlay" id="overlay"><div class="modal"><span class="kicker">TU MISIÓN</span><h2>¡Escribí las letras!</h2><p>Mirá la letra que cae y apretá esa misma tecla antes de que toque el suelo.</p><div class="steps"><b>A</b> Mirá &nbsp;→&nbsp; <b>A</b> Apretá &nbsp;→&nbsp; ✨ ¡Punto!</div><button class="primary" id="startKeyboard">¡Empezar misión!</button></div></div></section><p class="tip">💡 Usá las dos manos y buscá cada letra sin apuro.</p></main>';
+      const customPanel=custom?'<aside class="custom-tools" aria-label="Configuración custom"><div class="custom-tools-head"><h3><span>⚙</span> AJUSTES CUSTOM</h3><button class="custom-collapse" type="button" aria-expanded="true" aria-label="Minimizar ajustes custom">−</button></div><label class="custom-control"><span>Velocidad</span><input id="letterSpeed" type="range" min="12" max="80" value="32"><output id="letterSpeedOut">32</output></label><label class="custom-control"><span>Frecuencia</span><input id="letterFrequency" type="range" min="1" max="5" value="3"><output id="letterFrequencyOut">x3</output></label><label class="custom-control"><span>Vidas</span><input id="letterLives" type="range" min="1" max="9" value="3"><output id="letterLivesOut">3</output></label><label class="custom-toggle"><input id="letterInfinite" type="checkbox"> Nunca perder</label></aside>':'';
+      app.innerHTML='<main class="app game">'+gameHeader("keyboard",difficulty,stats)+'<section class="letter-arena" id="arena">'+customPanel+'<div class="ground"></div><div class="robot" id="robot"><i class="beam"></i><i class="antenna"></i><span class="head">•‿•</span><span class="body" id="robotKey">W</span></div><div class="overlay" id="overlay"><div class="modal"><span class="kicker">TU MISIÓN</span><h2>¡Escribí las letras!</h2><p>Mirá la letra que cae y apretá esa misma tecla antes de que toque el suelo.</p><div class="steps"><b>A</b> Mirá &nbsp;→&nbsp; <b>A</b> Apretá &nbsp;→&nbsp; ✨ ¡Punto!</div><button class="primary" id="startKeyboard">¡Empezar misión!</button></div></div></section><p class="tip">💡 Usá las dos manos y buscá cada letra sin apuro.</p></main>';
+      wireCustomPanel();
       const arena=document.getElementById("arena"),scoreEl=document.getElementById("score"),hearts=document.getElementById("hearts"),robot=document.getElementById("robot"),robotKey=document.getElementById("robotKey");
-      function updateHearts(){hearts.innerHTML=Array.from({length:Math.max(3,lives)},(_,i)=>'<span class="'+(i<lives?"":"off")+'">♥</span>').join("")}
+      function updateHearts(){if(custom&&neverLose){hearts.innerHTML='<span>∞</span>';return}hearts.innerHTML=Array.from({length:Math.max(3,lives)},(_,i)=>'<span class="'+(i<lives?"":"off")+'">♥</span>').join("")}
       function showArenaToast(text,type){const toast=document.createElement("div");toast.className="arena-toast "+type;toast.textContent=text;arena.appendChild(toast);setTimeout(()=>toast.remove(),1200)}
       function spawnLetter(){
         const alphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZ",el=document.createElement("div"),item={id:nextId++,char:alphabet[Math.floor(Math.random()*26)],x:8+Math.random()*84,y:-70,speed:cfg.speed+Math.floor(score/50)*cfg.ramp,el};
@@ -348,8 +365,8 @@
         if(spawn>=cfg.spawn&&letters.length<8){spawn=0;spawnLetter()}
         const bottom=arena.clientHeight-105;
         letters.slice().forEach(item=>{
-          item.y+=item.speed*dt;item.el.style.top=item.y+"px";
-          if(item.y>bottom){item.el.remove();letters=letters.filter(x=>x!==item);lives--;updateHearts();if(lives<=0)finish()}
+          item.y+=(custom?cfg.speed:item.speed)*dt;item.el.style.top=item.y+"px";
+          if(item.y>bottom){item.el.remove();letters=letters.filter(x=>x!==item);if(custom&&neverLose){showArenaToast("∞ SEGUIMOS","life")}else{lives--;updateHearts();if(lives<=0)finish()}}
         });
         raf=requestAnimationFrame(loop)
       }
@@ -365,23 +382,42 @@
           lives--;updateHearts();showArenaToast("−1 VIDA","wrong");if(lives<=0)finish()
         }
       }
-      function start(){letters.forEach(x=>x.el.remove());letters=[];score=0;lives=3;scoreEl.textContent="000";updateHearts();arena.querySelector(".overlay")?.remove();playing=true;last=performance.now();spawn=cfg.spawn-400;window.addEventListener("keydown",keydown);raf=requestAnimationFrame(loop)}
+      function start(){letters.forEach(x=>x.el.remove());letters=[];score=0;lives=custom?startingLives:3;scoreEl.textContent="000";updateHearts();arena.querySelector(".overlay")?.remove();playing=true;last=performance.now();spawn=cfg.spawn-400;window.addEventListener("keydown",keydown);raf=requestAnimationFrame(loop)}
       function finish(){playing=false;cancelAnimationFrame(raf);window.removeEventListener("keydown",keydown);arena.insertAdjacentHTML("beforeend",'<div class="overlay"><div class="modal"><span class="result-icon">🚀</span><span class="kicker">FIN DE LA MISIÓN</span><h2>¡Gran intento!</h2><p>Conseguiste '+score+' puntos. Cada intento entrena tus dedos.</p><button class="primary" id="retryKeyboard">Jugar otra vez</button><button class="secondary" onclick="go(\'picker\',\'keyboard\')">Cambiar dificultad</button></div></div>');document.getElementById("retryKeyboard").onclick=start}
+      if(custom){
+        const speed=document.getElementById("letterSpeed"),frequency=document.getElementById("letterFrequency"),livesInput=document.getElementById("letterLives"),infinite=document.getElementById("letterInfinite");
+        speed.oninput=()=>{cfg.speed=Number(speed.value);document.getElementById("letterSpeedOut").textContent=speed.value};
+        frequency.oninput=()=>{cfg.spawn=2600-Number(frequency.value)*350;document.getElementById("letterFrequencyOut").textContent="x"+frequency.value};
+        livesInput.oninput=()=>{startingLives=Number(livesInput.value);lives=startingLives;document.getElementById("letterLivesOut").textContent=livesInput.value;updateHearts()};
+        infinite.onchange=()=>{neverLose=infinite.checked;updateHearts()}
+      }
       document.getElementById("startKeyboard").onclick=start;
       cleanup=()=>{playing=false;cancelAnimationFrame(raf);window.removeEventListener("keydown",keydown)}
     }
     function typingGame(difficulty){
-      let balloons=[],score=0,saved=0,typed="",playing=false,jumping=false,raf=0,last=0,elapsed=0,nextId=1,lastWord="",lastPace="",timeouts=[];
+      let balloons=[],score=0,saved=0,typed="",neverLose=false,playing=false,jumping=false,raf=0,last=0,elapsed=0,nextId=1,lastWord="",lastPace="",timeouts=[];
       const configs={
         easy:{speed:18,accel:0,label:"Lento",spawnY:-175,initial:[70,-50,-170],example:"VAR",words:["VAR","INT","WEB","APP","BIT","BYTE","CODE","CODER","HTML","CSS","LOOP","LISTA","DATO","RED","ROBOT","TECLA","MOUSE","WECODE"]},
         medium:{speed:23,accel:.22,label:"En aumento",spawnY:-145,initial:[80,0,-80],example:"VARIABLE",words:["VARIABLE","FUNCION","CODIGO","PANTALLA","TECLADO","PROGRAMA","INTERNET","ARCHIVO","CARPETA","ALGORITMO","COMANDO","CONSOLA","EVENTO","OBJETO","BLOQUE","SISTEMA","PROYECTO","MENSAJE","BOTON","WECODER"]},
-        hard:{speed:34,accel:.08,label:"Rápido",spawnY:-120,initial:[85,10,-65],example:"PROGRAMACIÓN",words:["PROGRAMACIÓN","TECNOLOGÍA","CÓDIGO","FUNCIÓN","INFORMÁTICA","ALGORITMO","DESARROLLO","COMPUTADORA","APLICACIÓN","CONDICIÓN","ITERACIÓN","PARÁMETRO","DEPURACIÓN","AUTOMATIZACIÓN","CIBERSEGURIDAD","PROGRAMADOR","INTELIGENCIA","CONFIGURACIÓN","INTERFAZ","NAVEGACIÓN"]}
-      },cfg=configs[difficulty],words=cfg.words;
+        hard:{speed:34,accel:.08,label:"Rápido",spawnY:-120,initial:[85,10,-65],example:"PROGRAMACIÓN",words:["PROGRAMACIÓN","TECNOLOGÍA","CÓDIGO","FUNCIÓN","INFORMÁTICA","ALGORITMO","DESARROLLO","COMPUTADORA","APLICACIÓN","CONDICIÓN","ITERACIÓN","PARÁMETRO","DEPURACIÓN","AUTOMATIZACIÓN","CIBERSEGURIDAD","PROGRAMADOR","INTELIGENCIA","CONFIGURACIÓN","INTERFAZ","NAVEGACIÓN"]},
+        custom:{speed:24,accel:0,label:"Custom",spawnY:-145,initial:[80,0,-80],example:"WECODE",words:["VARIABLE","FUNCION","CODIGO","PANTALLA","TECLADO","PROGRAMA","INTERNET","ARCHIVO","CARPETA","ALGORITMO","COMANDO","CONSOLA","EVENTO","OBJETO","BLOQUE","SISTEMA","PROYECTO","MENSAJE","BOTON","WECODER"]}
+      };
+      const custom=difficulty==="custom",cfg=configs[difficulty],wordBanks={simple:configs.easy.words,medium:configs.medium.words,advanced:configs.hard.words};
+      let words=cfg.words;
       const colors=["#ff6b68","#5bd5f7","#ffca3a","#8ee36b","#ae8bff","#ff9357"];
       const stats='<div class="stat"><small>PUNTOS</small><strong id="typingScore">000</strong></div><div class="stat"><small>SALVADOS</small><strong id="savedWords">0</strong></div><div class="stat"><small>RITMO</small><strong id="typingPace">1.0x</strong></div>';
-      const missionText=difficulty==="easy"?"Practicá palabras cortitas de programación. Los globos nuevos aparecerán bien arriba.":difficulty==="medium"?"Escribí conceptos de WeCode. Cuanto más tiempo juegues, más rápido bajarán.":"Completá palabras avanzadas de programación. ¡Prestá atención a las tildes!";
-      app.innerHTML='<main class="app game">'+gameHeader("typing",difficulty,stats)+'<section class="typing-arena" id="typingArena"><div class="typing-guide">VELOCIDAD: '+cfg.label.toUpperCase()+'</div><div class="danger-line"><span>LÍNEA DE PELIGRO</span></div><div class="overlay" id="typingOverlay"><div class="modal"><span class="result-icon">🥷🎈</span><span class="kicker">MISIÓN WECODE</span><h2>¡Saltá programando!</h2><p>'+missionText+'</p><div class="steps">ESCRIBÍ: <strong>'+cfg.example+'</strong> &nbsp;→&nbsp; 🥷✨</div><button class="primary" id="startTyping">¡Empezar misión!</button></div></div></section><p class="tip">💡 Escribí la palabra amarilla. En Comandante también vas a necesitar las tildes.</p></main>';
+      const missionText=difficulty==="easy"?"Practicá palabras cortitas de programación. Los globos nuevos aparecerán bien arriba.":difficulty==="medium"?"Escribí conceptos de WeCode. Cuanto más tiempo juegues, más rápido bajarán.":difficulty==="hard"?"Completá palabras avanzadas de programación. ¡Prestá atención a las tildes!":"Elegí tus propios ajustes y creá una misión a medida.";
+      const customPanel=custom?'<aside class="custom-tools" aria-label="Configuración custom"><div class="custom-tools-head"><h3><span>⚙</span> AJUSTES CUSTOM</h3><button class="custom-collapse" type="button" aria-expanded="true" aria-label="Minimizar ajustes custom">−</button></div><label class="custom-control"><span>Velocidad</span><input id="typingSpeed" type="range" min="10" max="60" value="24"><output id="typingSpeedOut">24</output></label><label class="custom-control"><span>Aceleración</span><input id="typingAccel" type="range" min="0" max="40" value="0"><output id="typingAccelOut">+0</output></label><label class="custom-control"><span>Palabras</span><select id="typingWords"><option value="simple">Simples</option><option value="medium" selected>Medias</option><option value="advanced">Avanzadas</option></select></label><label class="custom-toggle"><input id="typingInfinite" type="checkbox"> Nunca perder</label></aside>':'';
+      app.innerHTML='<main class="app game">'+gameHeader("typing",difficulty,stats)+'<section class="typing-arena" id="typingArena">'+customPanel+'<div class="typing-guide">VELOCIDAD: '+cfg.label.toUpperCase()+'</div><div class="danger-line"><span>LÍNEA DE PELIGRO</span></div><div class="overlay" id="typingOverlay"><div class="modal"><span class="result-icon">🥷🎈</span><span class="kicker">MISIÓN WECODE</span><h2>¡Saltá programando!</h2><p>'+missionText+'</p><div class="steps">ESCRIBÍ: <strong>'+cfg.example+'</strong> &nbsp;→&nbsp; 🥷✨</div><button class="primary" id="startTyping">¡Empezar misión!</button></div></div></section><p class="tip">💡 Escribí la palabra amarilla. En Comandante también vas a necesitar las tildes.</p></main>';
+      wireCustomPanel();
       const arena=document.getElementById("typingArena"),scoreEl=document.getElementById("typingScore"),savedEl=document.getElementById("savedWords"),paceEl=document.getElementById("typingPace");
+      if(custom){
+        const speed=document.getElementById("typingSpeed"),accel=document.getElementById("typingAccel"),vocabulary=document.getElementById("typingWords"),infinite=document.getElementById("typingInfinite");
+        speed.oninput=()=>{cfg.speed=Number(speed.value);lastPace="";document.getElementById("typingSpeedOut").textContent=speed.value};
+        accel.oninput=()=>{cfg.accel=Number(accel.value)/60;document.getElementById("typingAccelOut").textContent="+"+accel.value};
+        vocabulary.onchange=()=>{words=wordBanks[vocabulary.value];lastWord=""};
+        infinite.onchange=()=>{neverLose=infinite.checked}
+      }
       function delay(fn,ms){const id=setTimeout(fn,ms);timeouts.push(id);return id}
       function chooseWord(){
         let word=words[Math.floor(Math.random()*words.length)];
@@ -410,13 +446,17 @@
       function showFlash(text){
         const flash=document.createElement("div");flash.className="typing-flash";flash.textContent=text;arena.appendChild(flash);delay(()=>flash.remove(),1100)
       }
+      function skipMissed(){
+        if(!balloons[0])return;jumping=true;const missed=balloons.shift();missed.el.remove();typed="";
+        const highest=Math.min(...balloons.map(item=>item.y)),spots=[24,50,76];makeBalloon(Math.min(cfg.spawnY,highest-82),spots[(saved+2)%spots.length]);renderWord();showFlash("∞ ¡SEGUIMOS PRACTICANDO!");delay(()=>{jumping=false},180)
+      }
       function loop(now){
         if(!playing)return;
         const dt=Math.min((now-last)/1000,.05);last=now;elapsed+=dt;
         const currentSpeed=cfg.speed+elapsed*cfg.accel,currentPace=(currentSpeed/cfg.speed).toFixed(1)+"x";
         if(currentPace!==lastPace){lastPace=currentPace;paceEl.textContent=currentPace}
         balloons.forEach(item=>{item.y+=currentSpeed*dt;item.el.style.top=item.y+"px"});
-        if(!jumping&&balloons[0]&&balloons[0].y>arena.clientHeight-205){finish()}
+        if(!jumping&&balloons[0]&&balloons[0].y>arena.clientHeight-205){if(custom&&neverLose)skipMissed();else finish()}
         if(playing)raf=requestAnimationFrame(loop)
       }
       function keydown(e){
